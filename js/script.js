@@ -160,11 +160,11 @@ function buildWhatsAppMessage(product, quantity, name, address, phone) {
   const total = product.price * quantity;
 
   return [
-    '🍰 *Commande Velmisu*',
+    'Commande Velmisu',
     '━━━━━━━━━━━━━━━━',
     '',
-    `*Produit:* ${product.name}`,
-    `*Quantité:* ${quantity}`,
+    `Produit: ${product.name}`,
+    `Quantité: ${quantity}`,
     `*Prix unitaire:* ${product.price} DH`,
     `*Total:* ${total} DH`,
     '',
