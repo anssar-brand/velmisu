@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mon site web">
+  <title>Mon Site Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">Velmisu</a>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <h1>Bienvenue sur mon site</h1>
+      <p>C'est ici que tu commences à construire ton site web.</p>
+      <button class="btn" id="ctaBtn">Commencer</button>
+    </section>
+
+    <section id="apropos" class="section">
+      <h2>À propos</h2>
+      <p>Ajoute ici une description de ton projet ou de toi-même.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="nom" placeholder="Ton nom" required>
+        <input type="email" name="email" placeholder="Ton email" required>
+        <textarea name="message" placeholder="Ton message" rows="4" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Velmisu. Tous droits réservés.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
