@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mon site web">
-  <title>Mon Site Web</title>
+  <meta name="description" content="Velmisu — Tiramisu artisanal premium, livré chez vous.">
+  <title>Velmisu | Tiramisu Artisanal Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="logo">Velmisu</a>
-      <ul class="nav-links">
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#accueil" class="logo">
+        <img src="logo.png" alt="Velmisu" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span class="logo-text">Velmisu</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#menu">Menu</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -25,31 +34,135 @@
   </header>
 
   <main>
+
+    <!-- Hero -->
     <section id="accueil" class="hero">
-      <h1>Bienvenue sur mon site</h1>
-      <p>C'est ici que tu commences à construire ton site web.</p>
-      <button class="btn" id="ctaBtn">Commencer</button>
+      <div class="hero-bg"></div>
+      <div class="hero-content container">
+        <span class="hero-badge">Artisanal · Premium · Frais</span>
+        <h1 class="hero-title">Madaq l-Tiramisu l-A5ili yji 7tal 3ndk</h1>
+        <p class="hero-subtitle">
+          Velmisu kay7ayek b tiramisu ma3moul b l7ob, b madaq li kayb9a f l-dhakira.
+          Koul nafsa hiya wa7da f l-3alam.
+        </p>
+        <a href="#menu" class="btn btn-primary btn-lg" id="ctaBtn">Tlab Daba</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Défiler</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
-    <section id="apropos" class="section">
-      <h2>À propos</h2>
-      <p>Ajoute ici une description de ton projet ou de toi-même.</p>
+    <!-- Menu / Products -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Notre Carte</span>
+          <h2 class="section-title">Nos Tiramisus</h2>
+          <p class="section-desc">
+            Khtar mn binet l-madaq dyalna. Kol wa7ed ma3moul f l-yom b l-kayf dyal l-3a9la.
+          </p>
+        </div>
+        <div class="products-grid" id="productsGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <form class="contact-form" id="contactForm">
-        <input type="text" name="nom" placeholder="Ton nom" required>
-        <input type="email" name="email" placeholder="Ton email" required>
-        <textarea name="message" placeholder="Ton message" rows="4" required></textarea>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
+    <!-- About -->
+    <section id="apropos" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-frame">
+            <div class="about-placeholder">
+              <span>Velmisu</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">Notre Histoire</span>
+          <h2 class="section-title">L'Art du Tiramisu</h2>
+          <p>
+            Velmisu hiya brand marocaine li kat7awel l-tiramisu l-3adi l-tajriba fakhra.
+            Mascarpone italien, café 9wi, o layers li kayt9adou b sabr o l7ob.
+          </p>
+          <p>
+            Kol commande katwsel 7til 3ndk fraiche, ma3moula f l-yom, b nafs l-joud
+            li kan3tiwha l-3a2ila dyalna.
+          </p>
+          <ul class="about-features">
+            <li>Ingrédients premium</li>
+            <li>Préparation artisanale</li>
+            <li>Livraison rapide</li>
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-inner">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">3ndek so2al?</h2>
+        <p class="section-desc">
+          Tlab mn l-menu o wselna 3la WhatsApp, ola dir contact m3ana directement.
+        </p>
+        <a href="https://wa.me/212650527938" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          WhatsApp Direct
+        </a>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 Velmisu. Tous droits réservés.</p>
+    <div class="container footer-inner">
+      <a href="#accueil" class="footer-logo">Velmisu</a>
+      <p class="footer-copy">&copy; 2026 Velmisu. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/212650527938" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Order Modal -->
+  <div class="modal-overlay" id="orderModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
+      <div class="modal-header">
+        <span class="section-label">Commande</span>
+        <h2 class="modal-title" id="modalTitle">Tlab <span id="modalProductName"></span></h2>
+        <p class="modal-price" id="modalProductPrice"></p>
+      </div>
+      <form class="order-form" id="orderForm">
+        <input type="hidden" id="orderProductId" name="productId">
+        <div class="form-group">
+          <label for="orderName">Smiya</label>
+          <input type="text" id="orderName" name="name" placeholder="Smiytek kamla" required>
+        </div>
+        <div class="form-group">
+          <label for="orderAddress">L-inwan</label>
+          <input type="text" id="orderAddress" name="address" placeholder="Fin bghiti nwslou lik?" required>
+        </div>
+        <div class="form-group">
+          <label for="orderPhone">Ra9m l-hatif (WhatsApp)</label>
+          <input type="tel" id="orderPhone" name="phone" placeholder="06 XX XX XX XX" required>
+        </div>
+        <div class="form-group">
+          <label for="orderQty">Quantity</label>
+          <div class="qty-control">
+            <button type="button" class="qty-btn" id="qtyMinus" aria-label="Diminuer">−</button>
+            <input type="number" id="orderQty" name="quantity" value="1" min="1" max="20" required>
+            <button type="button" class="qty-btn" id="qtyPlus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Confirmi 3la WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
