@@ -523,10 +523,8 @@ input {
 
 .about-logo {
   width: 280px;
-  height: 280px;
+  height: auto;
   object-fit: contain;
-  border-radius: 50%;
-  box-shadow: var(--shadow-lg);
 }
 
 /* ---- Contact ---- */
@@ -780,7 +778,6 @@ input {
 
   .about-logo {
     width: 200px;
-    height: 200px;
   }
 
   .products-grid {
