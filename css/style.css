@@ -522,7 +522,7 @@ input {
 }
 
 .about-logo {
-  width: 280px;
+  width: 500px;
   height: auto;
   object-fit: contain;
 }
@@ -777,7 +777,7 @@ input {
   }
 
   .about-logo {
-    width: 200px;
+    width: 500px;
   }
 
   .products-grid {
