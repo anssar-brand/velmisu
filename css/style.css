@@ -522,7 +522,7 @@ input {
 }
 
 .about-logo {
-  width: 500px;
+  width: 320px;
   height: auto;
   object-fit: contain;
 }
@@ -777,7 +777,7 @@ input {
   }
 
   .about-logo {
-    width: 500px;
+    width: 320px;
   }
 
   .products-grid {
@@ -797,4 +797,109 @@ input {
   .btn-lg {
     width: 100%;
   }
+} /* hada howa li zidt d logo*/
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.hero-logo-img {
+  max-width: 500px;
+  width: 300%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-logo-img {
+      max-width: 180px;
+  }
+}
+/* Correction layout Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 100px; /* Space bach "Découvrir" may-dkholch f l-button */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacement m-cadre mabin l-elements */
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+/* Fix spaces khawya dial Hero Logo */
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 !important; /* Nqssna l-margin l-khawi */
+}
+
+.hero-logo-img {
+  max-width: 500px; /* Hajm l-logo */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -10px !important;  /* Kay-jbed l-tswira l-fowq chwiya */
+  margin-bottom: -10px !important; /* Kay-nqss l-khawi li l-te7t */
+}
+
+/* Nqssna l-espace mabin l-textes f Hero */
+.hero-content {
+  gap: 10px !important; /* F blassat 20px */
+}
+
+.hero-subtitle {
+  margin-top: 0 !important;
+}
+/* Rapprochement de la description du logo */
+.hero-logo-wrapper {
+  margin-bottom: -30px !important; /* Kay-nqss l-khawi l-te7t dial l-logo */
+}
+
+.hero-subtitle {
+  margin-top: -15px !important; /* Kay-jbed l-ktaba l-fowq chwiya */
+}
+/* Fix dinamik bach l-ktaba t-bqa dima m-carée m3a l-logo */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0 !important; /* Ghadi n-7iydo l-gap l-khawi kaml */
+}
+
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-logo-img {
+  width: 350px; /* Hna tqderi t-kbbri aw t-sghri l-logo kif bghiti */
+  max-width: 90vw;
+  height: auto;
+  display: block;
+}
+
+/* Had negative margin kay-jbed l-ktaba l-fowq b-nisba m-massa m3a l-kbor dial l-logo */
+.hero-subtitle {
+  margin-top: -8% !important; /* Kullma kber l-logo, kay-jbed l-ktaba l-fowq s-mêt */
+  margin-bottom: 25px !important;
 }
