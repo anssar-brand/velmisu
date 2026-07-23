@@ -25,11 +25,20 @@
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -126,6 +135,34 @@
     </div>
   </footer>
 
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
+    <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-labelledby="cartTitle" aria-modal="true">
+      <div class="cart-header">
+        <h2 class="cart-title" id="cartTitle">Panier</h2>
+        <button class="cart-close" id="cartClose" aria-label="Fermer le panier">&times;</button>
+      </div>
+      <div class="cart-body" id="cartBody">
+        <div class="cart-empty" id="cartEmpty">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <p>Votre panier est vide</p>
+          <button class="btn btn-outline" id="cartBrowseBtn">Voir le menu</button>
+        </div>
+        <ul class="cart-items" id="cartItems"></ul>
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-summary">
+          <span>Total</span>
+          <span class="cart-total" id="cartTotal">0 DH</span>
+        </div>
+        <button class="btn btn-primary btn-full" id="cartCheckoutBtn">Valider la commande</button>
+      </div>
+    </aside>
+  </div>
+
   <!-- Order Modal -->
   <div class="modal-overlay" id="orderModal" aria-hidden="true">
     <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
@@ -134,9 +171,11 @@
         <span class="section-label">Commande</span>
         <h2 class="modal-title" id="modalTitle">Tlab <span id="modalProductName"></span></h2>
         <p class="modal-price" id="modalProductPrice"></p>
+        <div class="modal-cart-summary" id="modalCartSummary" hidden></div>
       </div>
       <form class="order-form" id="orderForm">
         <input type="hidden" id="orderProductId" name="productId">
+        <input type="hidden" id="orderMode" name="orderMode" value="single">
         <div class="form-group">
           <label for="orderName">nom</label>
           <input type="text" id="orderName" name="name" placeholder="Votre nom complet" required>
