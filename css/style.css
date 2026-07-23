@@ -602,9 +602,9 @@ input {
 
 .menu-btn span {
   display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--black);
+  width: 15px;
+  height: 1.5px;
+  background: var(--brown);
   transition: var(--transition);
   transform-origin: center;
 }
