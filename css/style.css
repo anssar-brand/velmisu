@@ -350,7 +350,7 @@ input {
 .hero-logo-wrapper {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   line-height: 0;
 }
 
@@ -574,7 +574,7 @@ input {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brown-light);
+  color: var(--white);
 }
 
 .footer p {
@@ -818,5 +818,18 @@ input {
 
   .btn-lg {
     width: 100%;
+  }
+}
+/* Style d Logo f Header / Nav */
+.nav-logo-img {
+  height: 30px; /* Hajm l-logo f Header */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+      height: 20px; /* Hajm sghir chwiya f tîlîfoun */
   }
 }
